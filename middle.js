@@ -1,25 +1,5 @@
-const eqArrays = function(arr1,arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-    }
-  else {
-    for (let i in arr1) {
-      if(arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-  }    
-  return true;
-}  
-      
-  
-const assertArraysEqual = function(arr1,arr2) {
-  if (eqArrays(arr1,arr2) === true) {
-    console.log(`✅✅✅ Two arrays are equal: ${[arr1]} === ${[arr2]}`);
-  } else {
-    console.log(`🛑🛑🛑Two arrays are NOT equal: ${[arr1]} !== ${[arr2]}`); 
-  }
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
   
 const middle = function(array) {
   let result =[]
@@ -38,22 +18,4 @@ const middle = function(array) {
 return result;  
 } 
 
-////// Test cases
-assertArraysEqual(middle([1,2]),[]);
-assertArraysEqual(middle([1]),[]);
-assertArraysEqual(middle([1,2,3,4,5]),[3]);
-assertArraysEqual(middle([1,2,3,4,5,6]),[3,4]);
-
-
-assertArraysEqual(middle([1,2]),[1]);
-assertArraysEqual(middle([1]),[2]);
-assertArraysEqual(middle([1,2,3,4,5]),[2]);
-assertArraysEqual(middle([1,2,3,4,5,6]),[2,3]);
-
-
-const myObject = {
-  a: 6,     
-  b: "abc", 
-  c: true,  
-  d: null,  
-};
+module.exports = middle;
