@@ -7,14 +7,14 @@ const assertEqual = function(actual,expected) {
 };
 
 const countLetters = function(str) {
-  let listOfLet = [];
+  let listOfLetters = [];
   let result = {};
   for (let char of str) {
     if (char !== " ") {
-    listOfLet.push(char)
+    listOfLetters.push(char)
     }
   }
-  for (let i of listOfLet) {
+  for (let i of listOfLetters) {
     if(result[i]) {
       result[i] += 1
     }
@@ -26,3 +26,4 @@ return result
 }
 
 console.log(countLetters("lighthouse in the house"))
+

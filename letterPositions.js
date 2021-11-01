@@ -54,5 +54,5 @@ const assertArraysEqual = function(arr1,arr2) {
   }
 };
 
-console.log(letterPositions("I love you"))
-assertArraysEqual(letterPositions("I love you")["e"], [4]);
+
+assertArraysEqual(letterPositions("hello").e, [1]);
